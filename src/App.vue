@@ -4,11 +4,18 @@ import {ref} from 'vue';
 import { forja } from './store/forja.js'
 
 let url = "https://mhw-db.com/zh-Hant/weapons";
+let array = []
+const forj = forja();
 
 const api = async ()=>{
     const respuesta = await fetch(url)
     .then((resp) => resp.json())
-    array.value = respuesta;
+    array = respuesta;
+    subirDatos();
+}
+
+const subirDatos = ()=>{
+  forj.obtenerForja(array);
 }
 
 api();

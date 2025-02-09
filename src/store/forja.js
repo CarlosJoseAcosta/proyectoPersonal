@@ -10,6 +10,7 @@ export const forja = defineStore('arma', {
     actions:{
         obtenerForja(datos){
             this.array = datos;
+            console.log(datos);
         }
     }
 }); 
