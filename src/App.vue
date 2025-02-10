@@ -3,7 +3,7 @@
 import {ref} from 'vue';
 import { forja } from './store/forja.js'
 
-let url = "https://mhw-db.com/zh-Hant/weapons";
+let url = "https://mhw-db.com/weapons";
 let array = []
 const forj = forja();
 

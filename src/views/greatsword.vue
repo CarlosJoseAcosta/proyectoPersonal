@@ -1,31 +1,48 @@
 <script setup>
 
 import {ref} from 'vue';
+import { forja } from '../store/forja.js';
 
 
 let array = ref(null);
-// let url = "https://mhw-db.com/zh-Hant/weapons";
+let forj = forja();
 
-// const api = async ()=>{
-//   const respuesta = await fetch(url)
-//   .then((resp) => resp.json())
-//   array.value = respuesta;
-// }
+const cargarDatos = ()=>{
+  array.value = forj.array;
 
-// api();
+  console.log("a");
+}
+
+cargarDatos();
+
 </script>
 
 <template>
     <h1>Espadon</h1>
-    <!-- <div v-if = "array == null">
+    <div v-if = "array == null">
       <p> Cargando... </p>
     </div>
     <div v-else>
       <div v-for="x in array">
         <div v-if = "x.type == 'great-sword'">
-            <p>{{ x.type }}</p></div>
+          <h2>{{ x.name }}</h2>
+          <div v-if = "x.assets.image == null">
+            
+          </div>
+          <div v-else>
+            <img :src="x.assets.image" alt=""></div>
+            <p>Damage: {{ x.attack.display }}</p>
+            <div v-if="x.elements == null || x.elements == ''">
+              
+            </div>
+            <div v-else>
+              <p>Element: {{ x.elements[0].type }}</p>
+              <p>Elemental damage: {{ x.elements[0].damage }}</p>
+            </div>
+          </div>
+
       </div>
-    </div> -->
+    </div>
   </template>
 
 <style scoped>
