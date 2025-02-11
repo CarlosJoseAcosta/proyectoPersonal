@@ -24,23 +24,30 @@ cargarDatos();
     </div>
     <div v-else>
       <div v-for="x in array">
-        <div v-if = "x.type == 'great-sword'">
+        
+        <div v-if = "(x.type == 'great-sword') && (x.crafting.craftable == true)">
           <h2>{{ x.name }}</h2>
           <div v-if = "x.assets.image == null">
             
           </div>
           <div v-else>
-            <img :src="x.assets.image" alt=""></div>
-            <p>Damage: {{ x.attack.display }}</p>
-            <div v-if="x.elements == null || x.elements == ''">
+            <img :src="x.assets.image" alt="">
+          </div>
+            <p><b>Damage:</b> {{ x.attack.display }}</p>
+            <div v-if="(x.elements == '')">
               
             </div>
             <div v-else>
-              <p>Element: {{ x.elements[0].type }}</p>
+              <p><b>Element:</b> {{ x.elements[0].type }}</p>
               <p>Elemental damage: {{ x.elements[0].damage }}</p>
             </div>
+            <p><b>crafting materials:</b></p>
+            <div v-for = "y in x.crafting.craftingMaterials">
+              <p>{{ y.item.name }}</p>
+            </div>
+            <p>Durability: red: {{ x.durability[5].red }}, orange: {{ x.durability[5].orange }}, yellow:  {{ x.durability[5].yellow }}, green: {{ x.durability[5].green }},  blue: {{ x.durability[5].blue }}</p>
+            <button :value = "x.id">Ver los materiales</button>
           </div>
-
       </div>
     </div>
   </template>

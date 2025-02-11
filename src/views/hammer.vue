@@ -3,24 +3,53 @@
 import {ref} from 'vue';
 import { forja } from '../store/forja.js';
 
-const forj =  forja;
-let array = ref(null);
 
-//     array.value = respuesta;
+let array = ref(null);
+let forj = forja();
+
+const cargarDatos = ()=>{
+  array.value = forj.array;
+
+  console.log("a");
+}
+
+cargarDatos();
 
 </script>
 
 <template>
-    <h1>Martillo</h1>
-    <!-- <div v-if = "array == null">
+    <h1>Hammer</h1>
+    <div v-if = "array == null">
       <p> Cargando... </p>
     </div>
     <div v-else>
       <div v-for="x in array">
-        <div v-if = "x.type == 'hammer'">
-            <p>{{ x.type }}</p></div>
+        
+        <div v-if = "(x.type == 'hammer') && (x.crafting.craftable == true)">
+          <h2>{{ x.name }}</h2>
+          <div v-if = "x.assets.image == null">
+            
+          </div>
+          <div v-else>
+            <img :src="x.assets.image" alt="">
+          </div>
+            <p><b>Damage:</b> {{ x.attack.display }}</p>
+            <div v-if="(x.elements == '')">
+              
+            </div>
+            <div v-else>
+              <p><b>Element:</b> {{ x.elements[0].type }}</p>
+              <p>Elemental damage: {{ x.elements[0].damage }}</p>
+            </div>
+            <p><b>crafting materials:</b></p>
+            <div v-for = "y in x.crafting.craftingMaterials">
+              <p>{{ y.item.name }}</p>
+            </div>
+            <p>Durability: red: {{ x.durability[5].red }}, orange: {{ x.durability[5].orange }}, yellow:  {{ x.durability[5].yellow }}, green: {{ x.durability[5].green }},  blue: {{ x.durability[5].blue }}</p>
+            <button :value = "x.id">Ver los materiales</button>
+          </div>
       </div>
-    </div> -->
+    </div>
   </template>
 
 <style scoped>
