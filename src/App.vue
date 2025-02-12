@@ -38,6 +38,10 @@ api();
     <router-link to = '/heavybowgun'> Heavy Bow Gun| </router-link>
     <router-link to = '/lightbowgun'> Light Bow Gun| </router-link>
     <router-link to = '/lance'> Lance| </router-link>
+    <router-link to = '/longsword'> Long Sword| </router-link>
+    <router-link to = '/switchaxe'> Switch Axe| </router-link>
+    <router-link to = '/swordandshield'> Sword And Shield| </router-link>
+
 
   </div>
   <div v-else>

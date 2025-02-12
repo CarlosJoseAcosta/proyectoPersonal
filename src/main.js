@@ -12,6 +12,10 @@ import gunlance from './views/gunlance.vue';
 import heavybowgun from './views/heavybowgun.vue';
 import lightbowgun from './views/lightbowgun.vue';
 import lance from './views/lance.vue';
+import longsword from './views/longsword.vue';
+import switchaxe from './views/switchaxe.vue';
+import swordandshield from './views/swordandshield.vue';
+
 
 
 const routes = [
@@ -25,6 +29,10 @@ const routes = [
 { path: '/heavybowgun', component: heavybowgun},
 { path: '/lightbowgun', component: lightbowgun},
 { path: '/lance', component: lance},
+{ path: '/longsword', component: longsword},
+{ path: '/switchaxe', component: switchaxe},
+{ path: '/swordandshield', component: swordandshield},
+
 
 ];
 const router = createRouter({
