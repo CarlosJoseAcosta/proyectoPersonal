@@ -2,18 +2,25 @@
 
 import {ref} from 'vue';
 import { forja } from '../store/forja.js';
+import { equipo } from '../store/equipo.js';
 
 
 let array = ref(null);
 let forj = forja();
+const weapon = equipo();
 
 const cargarDatos = ()=>{
   array.value = forj.array;
-
   console.log("a");
+  const weapon = equipo();
+}
+
+const equipoDeseado = (id)=>{
+  weapon.obtenerForja(id);
 }
 
 cargarDatos();
+
 
 </script>
 
@@ -46,7 +53,7 @@ cargarDatos();
               <p>{{ y.item.name }}</p>
             </div>
             <p>Durability: red: {{ x.durability[5].red }}, orange: {{ x.durability[5].orange }}, yellow:  {{ x.durability[5].yellow }}, green: {{ x.durability[5].green }},  blue: {{ x.durability[5].blue }}</p>
-            <button :value = "x.id">Ver los materiales</button>
+            <button  :value = "x.id" id = "idDeseado"  @click="equipoDeseado(x.id)">Desire</button>
           </div>
       </div>
     </div>

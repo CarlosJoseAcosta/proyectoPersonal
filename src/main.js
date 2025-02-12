@@ -6,11 +6,26 @@ import login from './views/login.vue';
 import greatsword from './views/greatsword.vue';
 import hammer from './views/hammer.vue';
 import bow from './views/bow.vue';
+import chargeBlade from './views/chargeBlade.vue';
+import dualblade from './views/dualblade.vue';
+import gunlance from './views/gunlance.vue';
+import heavybowgun from './views/heavybowgun.vue';
+import lightbowgun from './views/lightbowgun.vue';
+import lance from './views/lance.vue';
+
+
 const routes = [
 { path: '/', component: login},
 { path: '/greatSword', component: greatsword },
 { path: '/hammer', component: hammer },
-{ path: '/bow', component: bow}
+{ path: '/bow', component: bow},
+{ path: '/chargeBlade', component: chargeBlade},
+{ path: '/dualblade', component: dualblade},
+{ path: '/gunlance', component: gunlance},
+{ path: '/heavybowgun', component: heavybowgun},
+{ path: '/lightbowgun', component: lightbowgun},
+{ path: '/lance', component: lance},
+
 ];
 const router = createRouter({
 history: createWebHistory(),

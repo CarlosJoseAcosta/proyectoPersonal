@@ -10,8 +10,13 @@ export const log = defineStore('usuario',{
     },
     actions:{
         logeo(dato){
-            this.comprobante = true;
-            this.hunter = dato;
+            if(dato == ""){
+            }else{
+                this.comprobante = true;
+                this.hunter = dato;
+                console.log("logeado");
+                
+            }
         }
     }
 })

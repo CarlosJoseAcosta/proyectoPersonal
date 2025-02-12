@@ -29,12 +29,20 @@ api();
 <template>
   <div v-if = "logg.comprobante">
     <h2>Bienvenido {{ logg.hunter }}</h2>
-  </div>
-  <router-link to = '/'>Login</router-link>
-  <router-link to = "/greatsword">Great Sword</router-link>
-  <router-link to = "/hammer">Hammer</router-link>
-  <router-link to = '/bow'>Bow</router-link>
+    <router-link to = "/greatsword"> Great Sword| </router-link>
+    <router-link to = "/hammer"> Hammer| </router-link>
+    <router-link to = '/bow'> Bow| </router-link>
+    <router-link to = '/chargeBlade'> Charge blade| </router-link>
+    <router-link to = '/dualblade'> Dual blade| </router-link>
+    <router-link to = '/gunlance'> Gun Lance| </router-link>
+    <router-link to = '/heavybowgun'> Heavy Bow Gun| </router-link>
+    <router-link to = '/lightbowgun'> Light Bow Gun| </router-link>
+    <router-link to = '/lance'> Lance| </router-link>
 
+  </div>
+  <div v-else>
+    <router-link to = '/'> Login| </router-link>
+  </div>
   <router-view></router-view>
 </template>
 
