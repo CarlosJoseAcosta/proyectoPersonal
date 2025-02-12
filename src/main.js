@@ -15,6 +15,7 @@ import lance from './views/lance.vue';
 import longsword from './views/longsword.vue';
 import switchaxe from './views/switchaxe.vue';
 import swordandshield from './views/swordandshield.vue';
+import forja from './views/forja.vue';
 
 
 
@@ -32,6 +33,7 @@ const routes = [
 { path: '/longsword', component: longsword},
 { path: '/switchaxe', component: switchaxe},
 { path: '/swordandshield', component: swordandshield},
+{ path: '/forja', component: forja},
 
 
 ];

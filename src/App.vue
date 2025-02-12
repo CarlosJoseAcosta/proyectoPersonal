@@ -28,7 +28,7 @@ api();
 
 <template>
   <div v-if = "logg.comprobante">
-    <h2>Bienvenido {{ logg.hunter }}</h2>
+    <h2>Welcome {{ logg.hunter }}</h2>
     <router-link to = "/greatsword"> Great Sword| </router-link>
     <router-link to = "/hammer"> Hammer| </router-link>
     <router-link to = '/bow'> Bow| </router-link>
@@ -41,7 +41,7 @@ api();
     <router-link to = '/longsword'> Long Sword| </router-link>
     <router-link to = '/switchaxe'> Switch Axe| </router-link>
     <router-link to = '/swordandshield'> Sword And Shield| </router-link>
-
+    <router-link to = '/forja'> Desired   Equipment| </router-link>
 
   </div>
   <div v-else>

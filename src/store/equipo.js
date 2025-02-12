@@ -11,6 +11,9 @@ export const equipo = defineStore('armas', {
         obtenerForja(datos){
             this.weapons.push(datos);
             console.log(this.weapons);
-        }
+        },
+        eliminarEquipo(dato){
+            
+        },
     }
 }); 
