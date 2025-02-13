@@ -33,8 +33,8 @@ cargarDatos();
   <div v-else>
     <div v-for="x in array">
       
-      <div class="" v-if = "(x.type == 'great-sword') && (x.crafting.craftable == true)">
-        <div class = "border-2 border-style-solid ">
+      <div class="border-2 border-style-solid border-green-500" v-if = "(x.type == 'great-sword') && (x.crafting.craftable == true)">
+        <div class = "">
           <h2 class="text-2xl font-bold">{{ x.name }}</h2>
           <div v-if = "x.assets.image == null">
             
@@ -55,7 +55,7 @@ cargarDatos();
               <p>{{ y.item.name }}</p>
             </div>
             <p>Durability: red: {{ x.durability[5].red }}, orange: {{ x.durability[5].orange }}, yellow:  {{ x.durability[5].yellow }}, green: {{ x.durability[5].green }},  blue: {{ x.durability[5].blue }}</p>
-            <button  :value = "x.id" id = "idDeseado"  @click="equipoDeseado(x.id)">Desire</button>
+            <button class="flex select-none items-center gap-3 rounded-lg border border-emerald-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase bg-linear-to-t from-green-500 from -10% to-neutral-800 text-stone-50 transition-all hover:opacity-75 focus:ring focus:ring-pink-200 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" :value = "x.id" id = "idDeseado"  @click="equipoDeseado(x.id)">Desire</button>
           </div>
       </div>
     </div>

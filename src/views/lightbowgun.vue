@@ -52,7 +52,7 @@ cargarDatos();
             <div v-for = "y in x.crafting.craftingMaterials">
               <p>{{ y.item.name }}</p>
             </div>
-            <button  :value = "x.id" id = "idDeseado"  @click="equipoDeseado(x.id)">Desire</button>
+            <button class="flex select-none items-center gap-3 rounded-lg border border-emerald-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase bg-linear-to-t from-green-500 from -10% to-neutral-800 text-stone-50 transition-all hover:opacity-75 focus:ring focus:ring-pink-200 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" :value = "x.id" id = "idDeseado"  @click="equipoDeseado(x.id)">Desire</button>
           </div>
       </div>
     </div>
