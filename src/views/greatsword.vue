@@ -24,15 +24,18 @@ cargarDatos();
 </script>
 
 <template>
-    <h1>Great Sword</h1>
-    <div v-if = "array == null">
-      <p> Cargando... </p>
-    </div>
-    <div v-else>
-      <div v-for="x in array">
-        
-        <div v-if = "(x.type == 'great-sword') && (x.crafting.craftable == true)">
-          <h2>{{ x.name }}</h2>
+  <h1 class="my-4 text-center text-3xl font-bold">Great Sword</h1>
+  
+  
+  <div v-if = "array == null">
+    <p> Cargando... </p>
+  </div>
+  <div v-else>
+    <div v-for="x in array">
+      
+      <div class="grid grid-cols-2 gap-4" v-if = "(x.type == 'great-sword') && (x.crafting.craftable == true)">
+        <div class = "border-2 border-style-solid">
+          <h2 class="text-2xl font-bold">{{ x.name }}</h2>
           <div v-if = "x.assets.image == null">
             
           </div>
@@ -56,6 +59,7 @@ cargarDatos();
           </div>
       </div>
     </div>
+  </div>
   </template>
 
 <style scoped>

@@ -27,8 +27,8 @@ api();
 </script>
 
 <template>
-  <div v-if = "logg.comprobante" class="border-2 border-solid border-linear-to-r from-green-300 to-emerald-300 ">
-    <h2>Welcome {{ logg.hunter }}</h2>
+  <div v-if = "logg.comprobante" class="flex select-none items-center gap-3 rounded-lg border border-emerald-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase bg-linear-to-t from-green-500 from -10% to-black text-stone-50 transition-all">
+    <h2>Welcome {{ logg.hunter }}</h2><br>
     <router-link to = "/greatsword"> Great Sword| </router-link>
     <router-link to = "/hammer"> Hammer| </router-link>
     <router-link to = '/bow'> Bow| </router-link>
@@ -42,7 +42,6 @@ api();
     <router-link to = '/switchaxe'> Switch Axe| </router-link>
     <router-link to = '/swordandshield'> Sword And Shield| </router-link>
     <router-link to = '/forja'> Desired   Equipment| </router-link>
-
   </div>
   <div v-else>
     <router-link to = '/'> Login| </router-link>
