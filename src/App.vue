@@ -27,7 +27,7 @@ api();
 </script>
 
 <template>
-  <div v-if = "logg.comprobante">
+  <div v-if = "logg.comprobante" class="border-2 border-solid border-linear-to-r from-green-300 to-emerald-300 ">
     <h2>Welcome {{ logg.hunter }}</h2>
     <router-link to = "/greatsword"> Great Sword| </router-link>
     <router-link to = "/hammer"> Hammer| </router-link>

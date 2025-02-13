@@ -12,8 +12,5 @@ export const equipo = defineStore('armas', {
             this.weapons.push(datos);
             console.log(this.weapons);
         },
-        eliminarEquipo(dato){
-            
-        },
     }
 }); 
